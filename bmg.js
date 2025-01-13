@@ -106,4 +106,4 @@ let BMG = {
   }
 }
 
-export {RARC};
+export {BMG};
