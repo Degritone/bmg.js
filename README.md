@@ -31,12 +31,16 @@ Array  BMG.Data.strings = [
                       //If so, just fork this and remove the string ID stuff
     string:Uint8Array,
     codes:[
-      offset:Number,
-      type:String,
-      info:Number
+      {
+        offset:Number,
+        type:String,
+        info:Number
+      },
+      ...
     ],
     tag:Number
-  }
+  },
+  ...
 ]
 ```
 A code type may be any of the following:
