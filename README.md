@@ -60,6 +60,7 @@ A code type may be any of the following:
  - color
  - size
  - system
+
 If your game has any additional codes, you may fork this and add them in as needed. I've specialized for Pikmin 2, here. In Pikmin 2, system codes go unused in vanilla code and only one of them are even implemented, while the only control code is to control whether the ship's voice is fast or not. The only other code type that's not self-explanitory is colorEX, which lets you set the top and bottom colors in the text's gradient separately.
 
 You can copy a BMG.Data object by passing one such object into its constructor.
