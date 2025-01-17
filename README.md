@@ -13,9 +13,9 @@ let dropFiles = async function(e){
 
 To create a BMG file, provide a BMG.Data object to BMG.bmgify.
 ```js
-BMG.parseArrayBuffer(someArrayBuffer).then(colorTables=>{
+BMG.parseArrayBuffer(someArrayBuffer).then(stringData=>{
   let a = document.createElement("a");
-  a.href = URL.createObjectURL(new Blob([BMG.bmgify(colorTables)],{type:"application/octet-stream"}));
+  a.href = URL.createObjectURL(new Blob([BMG.bmgify(stringData)],{type:"application/octet-stream"}));
   a.download = "file.bmg";
   a.click();
 });
