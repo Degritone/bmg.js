@@ -4,7 +4,7 @@ To parse a BMG file, either provide a FileSystemHandle of the .arc file to BMG.p
 let dropFiles = async function(e){
   e.preventDefault();
   if(e.dataTransfer.files[0].name.match(/.bmg$/)){
-    e.dataTransfer.items[0].getAsFileSystemHandle().then(BMG.parseFileSystemHandle).then(colorTables=>{
+    e.dataTransfer.items[0].getAsFileSystemHandle().then(BMG.parseFileSystemHandle).then(stringData=>{
       //Use the colors here
     });
   }
