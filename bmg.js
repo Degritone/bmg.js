@@ -66,11 +66,12 @@ let BMG = {
       let offset = 1;
       for(let s of stringTable){
         offset+=s.length;
+        continue;
         if(s.length<stringArray.length)
           continue;
         let matches = true;
         let i;
-        for(i=-1;i>-stringArray.length;i--){
+        for(i=-1;i>-stringArray.length-1;i--){
           if(stringArray.at(i)!=s.at(i)){
             matches = false;
             break;
