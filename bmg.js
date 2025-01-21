@@ -66,7 +66,6 @@ let BMG = {
       let offset = 1;
       for(let s of stringTable){
         offset+=s.length;
-        continue;
         if(s.length<stringArray.length)
           continue;
         let matches = true;
@@ -372,7 +371,7 @@ let BMG = {
         end++;
       }
       codes = codes.reverse().filter((c,i)=>["system","image","pause"].includes(c.type) || !codes.some((o,j)=>j<i && o.offset==c.offset && o.type==c.type)).reverse();
-      string = string.concat(Array.from(s.slice(start)));
+      string = new Uint8Array(string.concat(Array.from(s.slice(start))));
       this.strings.push({id,string,codes,tag:tags[i]});
     }
   }
