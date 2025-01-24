@@ -65,12 +65,13 @@ let BMG = {
     let getOffset = function(stringArray){
       let offset = 1;
       for(let s of stringTable){
+        if(s==stringArray)
+          return offset;
         offset+=s.length;
         if(s.length<stringArray.length)
           continue;
         let matches = true;
-        let i;
-        for(i=-1;i>-stringArray.length-1;i--){
+        for(let i=-1;i>-stringArray.length-1;i--){
           if(stringArray.at(i)!=s.at(i)){
             matches = false;
             break;
@@ -188,7 +189,8 @@ let BMG = {
       }
       string.push(0);
       offsetTableSize+=entrySize;
-      strings.push(new Uint8Array(string));
+      string = new Uint8Array(string);
+      strings.push(string);
       if(getOffset(string)==stringSize){
         stringSize+=string.length;
         stringTable.push(string);
