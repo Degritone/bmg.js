@@ -72,8 +72,8 @@ BMG.parseArrayBuffer(someArrayBuffer).then(stringData=>{
 
 The function signatures are as follows:
 ```js
-RARC.parseFileSystemHandle(FileSystemHandle) -> Promise -> BMG.Data
-RARC.parseArrayBuffer(ArrayBuffer)           -> Promise -> BMG.Data
-RARC.parseArrayBuffer(Uint8Array)            -> Promise -> BMG.Data
-RARC.bmgify(BMG.Data)                        -> Uint8Array
+BMG.parseFileSystemHandle(FileSystemHandle) -> Promise -> BMG.Data
+BMG.parseArrayBuffer(ArrayBuffer)           -> Promise -> BMG.Data
+BMG.parseArrayBuffer(Uint8Array)            -> Promise -> BMG.Data
+BMG.bmgify(BMG.Data)                        -> Uint8Array
 ```
